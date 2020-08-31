@@ -45,6 +45,7 @@ public class Solution {
                 q = q.next;
             }
         }
+
         if (carry > 0) {
             curr.next = new ListNode(carry);
         }
