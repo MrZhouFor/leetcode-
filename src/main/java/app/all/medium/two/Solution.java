@@ -1,4 +1,4 @@
-package app.all.hard.two;
+package app.all.medium.two;
 
 import app.common.ListNode;
 
