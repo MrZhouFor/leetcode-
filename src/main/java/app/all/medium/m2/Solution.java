@@ -1,4 +1,4 @@
-package app.all.medium.two;
+package app.all.medium.m2;
 
 import app.common.ListNode;
 
