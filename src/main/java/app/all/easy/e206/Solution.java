@@ -1,4 +1,6 @@
-package app.all.easy206;
+package app.all.easy.e206;
+
+import app.common.ListNode;
 
 /**
  * 反转一个单链表。

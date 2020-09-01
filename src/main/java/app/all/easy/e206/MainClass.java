@@ -1,4 +1,4 @@
-package app.all.easy206;
+package app.all.easy.e206;
 
 import java.io.BufferedReader;
 import java.io.IOException;
