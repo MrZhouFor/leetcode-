@@ -1,6 +1,4 @@
-package app.all.easy.e206;
-
-import app.common.ListNode;
+package app.all.easy.e1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,10 +6,9 @@ import java.io.InputStreamReader;
 
 /**
  * @author zhouze
- * @date 2020/8/11
+ * @date 2020/9/4
  */
 public class MainClass {
-
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
         input = input.substring(1, input.length() - 1);
@@ -28,42 +25,34 @@ public class MainClass {
         return output;
     }
 
-    public static ListNode stringToListNode(String input) {
-        // Generate array from the input
-        int[] nodeValues = stringToIntegerArray(input);
-
-        // Now convert that list into linked list
-        ListNode dummyRoot = new ListNode(0);
-        ListNode ptr = dummyRoot;
-        for(int item : nodeValues) {
-            ptr.next = new ListNode(item);
-            ptr = ptr.next;
-        }
-        return dummyRoot.next;
-    }
-
-    public static String listNodeToString(ListNode node) {
-        if (node == null) {
+    public static String integerArrayToString(int[] nums, int length) {
+        if (length == 0) {
             return "[]";
         }
 
         String result = "";
-        while (node != null) {
-            result += Integer.toString(node.val) + ", ";
-            node = node.next;
+        for(int index = 0; index < length; index++) {
+            int number = nums[index];
+            result += Integer.toString(number) + ", ";
         }
         return "[" + result.substring(0, result.length() - 2) + "]";
+    }
+
+    public static String integerArrayToString(int[] nums) {
+        return integerArrayToString(nums, nums.length);
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = in.readLine()) != null) {
-            ListNode head = stringToListNode(line);
+            int[] nums = stringToIntegerArray(line);
+            line = in.readLine();
+            int target = Integer.parseInt(line);
 
-            ListNode ret = new Solution().reverseList(head);
+            int[] ret = new Solution().twoSum(nums, target);
 
-            String out = listNodeToString(ret);
+            String out = integerArrayToString(ret);
 
             System.out.print(out);
         }
