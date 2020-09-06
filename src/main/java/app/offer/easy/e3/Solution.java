@@ -34,7 +34,7 @@ public class Solution {
      * @return
      */
     private int answer2(int[] nums) {
-
+        return -1;
     }
 
     /**
