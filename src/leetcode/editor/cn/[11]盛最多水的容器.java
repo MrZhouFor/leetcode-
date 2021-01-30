@@ -61,7 +61,7 @@
     return max;
  */
 
-//2. 从两边向中间计算，过滤高低较低的元素
+//2. 从两边向中间计算，过滤高低较低的元素 O(n)
 
 class Solution {
     public int maxArea(int[] height) {
