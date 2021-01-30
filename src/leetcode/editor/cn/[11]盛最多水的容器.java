@@ -63,13 +63,22 @@
 
 //2. 从两边向中间计算，过滤高低较低的元素 O(n)
 
+/*
+    int max = 0;
+    for (int i = 0, j = height.length - 1; i < j; ) {
+        int minHeight = height[i] < height[j] ? height[i++] : height[j--];
+        int area = (j - i + 1) * minHeight;
+        max = Math.max(max, area);
+    }
+    return max;
+ */
+
 class Solution {
     public int maxArea(int[] height) {
         int max = 0;
         for (int i = 0, j = height.length - 1; i < j; ) {
             int minHeight = height[i] < height[j] ? height[i++] : height[j--];
-            int area = (j - i + 1) * minHeight;
-            max = Math.max(max, area);
+            max = Math.max(max, (j - i + 1) * minHeight);
         }
         return max;
     }
