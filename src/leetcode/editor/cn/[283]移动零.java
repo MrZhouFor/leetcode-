@@ -20,7 +20,7 @@ class Solution {
     public void moveZeroes(int[] nums) {
         int j = 0;
         // 一定是需要循环数组的
-        for (int i = 0;  < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             // 迭代的元素是否为0
             if (nums[i] != 0) {
                 nums[j] = nums[i];
