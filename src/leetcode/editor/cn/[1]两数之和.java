@@ -43,6 +43,9 @@
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
+//1. 暴力
+//2. hash表存
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap();
