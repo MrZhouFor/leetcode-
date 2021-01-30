@@ -21,13 +21,14 @@ class Solution {
         int j = 0;
         // 一定是需要循环数组的
         for (int i = 0; i < nums.length; i++) {
-            // 迭代的元素是否为0
+            // 迭代的元素是否为0， 非零的与下标为j的元素交换
             if (nums[i] != 0) {
                 nums[j] = nums[i];
                 if (i != j) {
                     nums[i] = 0;
                 }
                 // j的增长取决于当前数组的迭代值是否为零
+                // 只有当前不为零，i与j同步增长
                 j++;
             }
         }
